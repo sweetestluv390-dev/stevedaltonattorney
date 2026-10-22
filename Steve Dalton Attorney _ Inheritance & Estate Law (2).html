@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#5e5343">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Steve Dalton Attorney | Inheritance & Estate Law</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--taupe:#5e5343;--gold:#ad8742;--cream:#fdf9f2;--ink:#2b251c;--card:#fff;--muted:#6f6556;--line:#e8dfcd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--cream:#1f1b15;--ink:#f3ecdd;--card:#2a251d;--muted:#b9ad98;--line:#3d362a;--taupe:#4a4134}}
+:root[data-theme="dark"]{--cream:#1f1b15;--ink:#f3ecdd;--card:#2a251d;--muted:#b9ad98;--line:#3d362a;--taupe:#4a4134}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.15;margin:0}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:5;background:var(--taupe);color:#fdf9f2;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw}
+nav b{font:600 1.25rem "Cormorant Garamond",Georgia,serif;letter-spacing:.04em}
+nav div a{text-decoration:none;margin-left:20px;font-size:.9rem;opacity:.9}
+nav div a:hover{color:#d9b36a}
+.hero{background:var(--taupe);color:#fdf9f2;padding:80px 5vw 110px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;border:44px solid var(--gold)}
+.hero:after{content:"";position:absolute;left:-90px;bottom:-130px;width:280px;height:280px;border-radius:50%;border:34px solid var(--gold);opacity:.8}
+.hero>*{position:relative;z-index:1;max-width:760px}
+.arch{width:84px;height:110px;border:7px solid var(--gold);border-radius:42px 42px 42px 42px;display:grid;place-items:center;margin-bottom:26px;background:var(--taupe)}
+.eyebrow{color:#d9b36a;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.6rem,7vw,4.6rem);margin:10px 0 18px}
+.hero p{font-size:1.1rem;opacity:.92;max-width:600px}
+.btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 26px;border-radius:40px;text-decoration:none;font-weight:500;margin:18px 12px 0 0}
+.btn.o{background:none;border:1px solid var(--gold)}
+section{padding:72px 5vw;max-width:1100px;margin:auto}
+h2{font-size:clamp(2rem,4.5vw,2.8rem);margin-bottom:8px}
+h2:after{content:"";display:block;width:60px;height:3px;background:var(--gold);margin:12px 0 28px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{font-size:1.5rem;color:var(--gold);margin-bottom:6px}
+.about{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+.tl{border-left:2px solid var(--gold);padding-left:22px}
+.tl div{margin-bottom:20px;position:relative}
+.tl div:before{content:"";position:absolute;left:-30px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.tl b{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem}
+.tl span{display:block;color:var(--muted);font-size:.9rem}
+.stats{display:flex;flex-wrap:wrap;gap:30px;margin-top:20px}
+.stats b{display:block;font:700 2.4rem "Cormorant Garamond",Georgia,serif;color:var(--gold)}
+.stats span{color:var(--muted);font-size:.85rem}
+.band{background:var(--taupe);color:#fdf9f2;max-width:none}
+.band .in{max-width:1100px;margin:auto}
+.band .card{background:rgba(255,255,255,.07);border-color:rgba(217,179,106,.4)}
+.band .card p{margin:0 0 14px;font-style:italic}
+.band .card b{color:#d9b36a;font-style:normal}
+.q{font:700 3rem/1 "Cormorant Garamond",Georgia,serif;color:#d9b36a;display:block;height:30px}
+.contact a.mail{display:block;font-size:1.05rem;margin:6px 0;word-break:break-all;color:var(--gold)}
+footer{background:var(--taupe);color:#fdf9f2;text-align:center;padding:26px 5vw;font-size:.85rem;border-top:6px solid var(--gold)}
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes breathe{50%{transform:scale(1.1)}}
+@keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(217,179,106,.55)}100%{box-shadow:0 0 0 22px rgba(217,179,106,0)}}
+@keyframes shine{from{background-position:200% 0}to{background-position:-200% 0}}
+@keyframes sweep{0%,60%{left:-80%}100%{left:140%}}
+@keyframes drift{0%,100%{transform:translateY(0) scale(1);opacity:.15}50%{transform:translateY(-46px) scale(1.7);opacity:.9}}
+@keyframes bg{50%{background-position:100% 50%}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(173,135,66,.6)}100%{box-shadow:0 0 0 12px rgba(173,135,66,0)}}
+.hero:before{animation:breathe 8s ease-in-out infinite}
+.hero:after{animation:breathe 10s ease-in-out infinite reverse}
+.hero>*{animation:rise .9s ease-out backwards}
+.hero>*:nth-child(2){animation-delay:.2s}.hero>*:nth-child(4){animation-delay:.55s}.hero>*:nth-child(5){animation-delay:.7s}.hero>*:nth-child(6){animation-delay:.8s}
+.arch{animation:rise .9s ease-out backwards,glow 2.6s ease-out 1s infinite}
+.arch svg{animation:sway 4.5s ease-in-out infinite;transform-origin:50% 85%}
+@keyframes tilt{0%,100%{transform:perspective(900px) rotateY(0) rotateX(0)}25%{transform:perspective(900px) rotateY(-12deg) rotateX(4deg)}75%{transform:perspective(900px) rotateY(12deg) rotateX(-3deg)}}
+.hero h1{color:#fdf9f2;font-weight:700;letter-spacing:.02em;animation:rise .9s .35s ease-out backwards,tilt 8s ease-in-out 1.3s infinite;text-shadow:1px 1px 0 #e3c283,2px 2px 0 #d9b36a,3px 3px 0 #cda45a,4px 4px 0 #c29a52,5px 5px 0 #b78f4a,6px 6px 0 #ad8742,7px 7px 0 #9c7a3a,8px 8px 0 #8a6b32,9px 9px 0 #755a2a,12px 16px 20px rgba(0,0,0,.5)}
+.hero h1 span{display:block;font-size:.4em;letter-spacing:.55em;text-transform:uppercase;color:#d9b36a;margin-top:12px;text-shadow:1px 1px 0 #7a5a22,2px 2px 0 #5f4519,3px 3px 0 #4a3412,5px 7px 10px rgba(0,0,0,.5)}
+.hero>i.p{position:absolute;width:8px;height:8px;border-radius:50%;background:#d9b36a;max-width:none;animation:drift 7s ease-in-out infinite;z-index:0}
+.btn{position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(173,135,66,.45)}
+.btn:after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:sweep 3.6s infinite}
+nav{transition:padding .3s,box-shadow .3s}nav.s{padding:7px 5vw;box-shadow:0 6px 22px rgba(0,0,0,.28)}
+nav div a{position:relative}nav div a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:#d9b36a;transition:width .3s}nav div a:hover:after{width:100%}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),#e6c680);z-index:9}
+.card{transition:transform .35s,box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(94,83,67,.2);border-color:var(--gold)}
+.card h3{transition:letter-spacing .35s}.card:hover h3{letter-spacing:.04em}
+.q{transition:transform .4s}.card:hover .q{transform:scale(1.3) rotate(-6deg)}
+.tl div:before{animation:ping 2.6s infinite}
+.band{background:linear-gradient(120deg,var(--taupe),#77684f,var(--taupe));background-size:220% 220%;animation:bg 14s ease infinite}
+.js .rv{opacity:0;transform:translateY(36px);transition:opacity .8s ease-out,transform .8s ease-out}
+.js .rv.in{opacity:1;transform:none}
+.js h2:after{width:0;transition:width .9s .3s}.js h2.ul:after{width:60px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.js h2:after{width:60px}}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overflow-x:hidden;overflow-x:clip}
+img,svg{max-width:100%}
+nav,section,.hero,footer{padding-left:max(5vw,env(safe-area-inset-left));padding-right:max(5vw,env(safe-area-inset-right))}
+#mb{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}
+#mb span,#mb span:before,#mb span:after{display:block;position:absolute;width:24px;height:2px;background:#fdf9f2;transition:transform .3s,top .3s,background .3s}
+#mb span{top:21px;left:10px}#mb span:before,#mb span:after{content:"";left:0}#mb span:before{top:-8px}#mb span:after{top:8px}
+nav.open #mb span{background:transparent}nav.open #mb span:before{top:0;transform:rotate(45deg)}nav.open #mb span:after{top:0;transform:rotate(-45deg)}
+@keyframes tiltm{0%,100%{transform:perspective(700px) rotateY(0) rotateX(0)}25%{transform:perspective(700px) rotateY(-7deg) rotateX(3deg)}75%{transform:perspective(700px) rotateY(7deg) rotateX(-2deg)}}
+@media(max-width:900px){section{padding-top:60px;padding-bottom:60px}.hero{padding-top:64px;padding-bottom:96px}}
+@media(max-width:700px){
+nav b{font-size:1.1rem}
+#mb{display:block}
+nav div{position:absolute;left:0;right:0;top:100%;background:var(--taupe);display:flex;flex-direction:column;padding:0 5vw;max-height:0;overflow:hidden;visibility:hidden;opacity:0;border-top:1px solid rgba(217,179,106,.4);transition:max-height .35s,opacity .3s,visibility .3s,padding .3s}
+nav.open div{max-height:340px;visibility:visible;opacity:1;padding:6px 5vw 14px}
+nav div a{margin:0;padding:15px 0;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+nav div a:last-child{border-bottom:0}nav div a:after{display:none}
+section{padding-top:48px;padding-bottom:48px}
+.hero{padding-top:52px;padding-bottom:80px}
+.hero:before{width:220px;height:220px;border-width:28px;right:-100px;top:-90px}
+.hero:after{width:170px;height:170px;border-width:22px;left:-70px;bottom:-90px}
+.arch{width:68px;height:90px;border-width:6px;margin-bottom:20px}.arch svg{width:38px;height:38px}
+.hero h1{animation:rise .9s .35s ease-out backwards,tiltm 8s ease-in-out 1.3s infinite;text-shadow:1px 1px 0 #e3c283,2px 2px 0 #d9b36a,3px 3px 0 #c29a52,4px 4px 0 #ad8742,5px 5px 0 #8a6b32,7px 10px 12px rgba(0,0,0,.5)}
+.hero h1 span{letter-spacing:.4em;margin-top:8px;text-shadow:1px 1px 0 #7a5a22,2px 2px 0 #5f4519,3px 5px 7px rgba(0,0,0,.5)}
+.hero p{font-size:1rem}
+.btn{display:block;text-align:center;margin:14px 0 0;padding:15px 22px}
+.about{grid-template-columns:1fr;gap:28px}
+.stats{justify-content:space-between;gap:14px}.stats b{font-size:2rem}
+.card{padding:22px}.card h3{font-size:1.35rem}
+.contact a.mail{font-size:.95rem;padding:6px 0}
+footer{padding-top:22px;padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+@media(max-width:360px){.hero h1{font-size:2.3rem}nav b{font-size:1rem}}
+@media(hover:none){.card:hover{transform:none;box-shadow:none;border-color:var(--line)}.card:hover h3{letter-spacing:0}.card:hover .q{transform:none}.btn:hover{transform:none;box-shadow:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div id="bar"></div>
+<nav><b>⚖ Steve Dalton</b><div><a href="#about">About</a><a href="#areas">Services</a><a href="#stories">Testimonials</a><a href="#contact">Contact</a></div><button id="mb" type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button></nav>
+
+<header class="hero">
+<div class="arch"><svg width="48" height="48" viewBox="0 0 48 48" fill="#fff"><rect x="22.5" y="6" width="3" height="32"/><rect x="14" y="38" width="20" height="4" rx="1"/><rect x="6" y="10" width="36" height="2.5" rx="1"/><path d="M8 13l-5 14h10zM40 13l-5 14h10z" opacity=".9"/><path d="M3 27a5 3 0 0 0 10 0zM35 27a5 3 0 0 0 10 0z"/></svg></div>
+<div class="eyebrow">Inheritance &amp; Estate Law</div>
+<h1>Steve Dalton<span>Attorney</span></h1>
+<p>Protecting families, honouring wishes and resolving inheritance matters with fairness, discretion and care, so that what was left in love is never lost to conflict.</p>
+<a class="btn" href="#contact">Book a Consultation</a><a class="btn o" href="#stories">Read Client Stories</a>
+<i class="p" style="left:8%;top:62%"></i><i class="p" style="left:28%;top:20%;animation-delay:1.5s"></i><i class="p" style="left:52%;top:74%;animation-delay:3s"></i><i class="p" style="left:70%;top:38%;animation-delay:.8s"></i><i class="p" style="left:86%;top:70%;animation-delay:2.2s"></i><i class="p" style="left:40%;top:48%;animation-delay:4s"></i>
+</header>
+
+<section id="about">
+<h2>About Steve</h2>
+<div class="about">
+<div>
+<p>Steve Dalton is the attorney in charge of inheritance matters, known for steady guidance during some of life's most sensitive moments. Clients describe him as patient, plain-spoken and relentless on their behalf.</p>
+<p>From drafting wills and trusts to resolving disputed estates and probate, Steve combines sharp legal skill with real compassion, explaining every step in simple language so families always know where they stand.</p>
+<div class="stats"><div><b>15+</b><span>Years of practice</span></div><div><b>400+</b><span>Estates settled</span></div><div><b>98%</b><span>Client satisfaction</span></div></div>
+</div>
+<div class="tl">
+<div><b>Attorney in Charge, Inheritance</b><span>Present · Steve Dalton Attorney</span></div>
+<div><b>Senior Associate, Estate &amp; Probate</b><span>Specialised in wills, trusts and contested estates</span></div>
+<div><b>Admitted to the Bar</b><span>Qualified legal practitioner</span></div>
+<div><b>Master of Laws (LL.M.), Estate &amp; Succession Law</b><span>Postgraduate specialisation</span></div>
+<div><b>Bachelor of Laws (LL.B.)</b><span>Foundation in law and legal practice</span></div>
+</div>
+</div>
+</section>
+
+<section id="areas">
+<h2>How I Can Help</h2>
+<div class="grid">
+<div class="card"><h3>Wills &amp; Trusts</h3><p>Clear, lasting documents that reflect your wishes and protect your loved ones.</p></div>
+<div class="card"><h3>Probate &amp; Administration</h3><p>Smooth, step-by-step handling of an estate from first filing to final distribution.</p></div>
+<div class="card"><h3>Inheritance Disputes</h3><p>Firm representation when a will is contested or a share is unfairly denied.</p></div>
+<div class="card"><h3>Estate Planning</h3><p>Forward-looking strategies to preserve family wealth across generations.</p></div>
+</div>
+</section>
+
+<section id="stories" class="band"><div class="in">
+<h2>What Clients Say</h2>
+<div class="grid">
+<div class="card"><span class="q">“</span><p>Steve made a painful time bearable. He settled my late father's estate quickly and kept my siblings and me on good terms.</p><b>Margaret Hollis</b></div>
+<div class="card"><span class="q">“</span><p>I was told my inheritance claim was hopeless. Steve fought for it and won. I'm forever grateful.</p><b>James Okafor</b></div>
+<div class="card"><span class="q">“</span><p>Professional, honest and kind. He explained everything so clearly that I never felt lost.</p><b>Linda Carver</b></div>
+<div class="card"><span class="q">“</span><p>Our family land dispute had dragged on for years. Steve resolved it fairly within months.</p><b>Daniel Mensah</b></div>
+<div class="card"><span class="q">“</span><p>He drafted our wills with such care. We finally have peace of mind for our children.</p><b>Rebecca &amp; Tom Wallace</b></div>
+<div class="card"><span class="q">“</span><p>Responsive, thorough and always on my side. I recommend Steve without hesitation.</p><b>Aisha Bello</b></div>
+</div></div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Get in Touch</h2>
+<div class="card">
+<p>Your family's future deserves careful hands. Send a message to arrange a confidential consultation.</p>
+<a class="mail" href="mailto:steve.dalton.legal@outlook.com">✉ steve.dalton.legal@outlook.com</a>
+<a class="mail" href="mailto:officialstevedalton@gmail.com">✉ officialstevedalton@gmail.com</a>
+<a class="btn" href="mailto:steve.dalton.legal@outlook.com">Email Steve</a>
+</div>
+</section>
+
+<footer>© 2026 Steve Dalton Attorney · Inheritance &amp; Estate Law</footer>
+<script>
+(function(){
+var d=document,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var nav=d.querySelector('nav'),bar=d.getElementById('bar');
+function sc(){var y=window.scrollY,h=d.documentElement.scrollHeight-innerHeight;nav.classList.toggle('s',y>40);bar.style.width=(h>0?y/h*100:0)+'%'}
+addEventListener('scroll',sc,{passive:true});sc();
+var mb=d.getElementById('mb');function cl(o){nav.classList.toggle('open',o);mb.setAttribute('aria-expanded',o)}
+mb.addEventListener('click',function(){cl(!nav.classList.contains('open'))});
+nav.querySelectorAll('div a').forEach(function(a){a.addEventListener('click',function(){cl(false)})});
+addEventListener('resize',function(){if(innerWidth>700)cl(false)});
+if(rm||!('IntersectionObserver' in window))return;
+var els=d.querySelectorAll('h2,.about>div,.grid>*,.tl>div,.stats>div,.contact .card');
+els.forEach(function(e){var i=Array.prototype.indexOf.call(e.parentNode.children,e);e.classList.add('rv');e.style.transitionDelay=(i*90)+'ms'});
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;var e=x.target;io.unobserve(e);e.classList.add('in');if(e.tagName==='H2')e.classList.add('ul');setTimeout(function(){e.classList.remove('rv','in');e.style.transitionDelay=''},1300)})},{threshold:.15});
+els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
